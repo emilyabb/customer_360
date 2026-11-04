@@ -1,0 +1,5 @@
+*.docx
+.venv/
+.uv-cache/
+.tmp/
+landing/
