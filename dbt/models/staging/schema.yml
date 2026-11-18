@@ -1,0 +1,191 @@
+version: 2
+
+# Tests for staging models. Staging is the testing boundary: source freshness
+# guards the raw side (see models/sources.yml), these data tests guard the shaped side.
+# Key-test policy (every key column is tested):
+#   - Grain keys (one row per source record): unique + not_null.
+#   - Foreign keys: not_null + relationships (parent integrity). unique cannot
+#     apply — a parent legitimately has many children (e.g. 74,428 invoices
+#     over 4,206 customers; verified 2026-11-18, 0 orphan FKs in all 3 cases).
+# Column-level facts below were validated against bronze data on 2026-11-18
+# (see initial_setup/validate_natural_keys.sql); tests only assert what the
+# data actually satisfies (e.g. crm email is NOT not_null-tested — 161 rows
+# lack it; support solved_at is nullable for unsolved tickets).
+# The answer key is NOT staged: it is ground truth for scoring, lives outside
+# the pipeline in c360.evaluation_dev (source 'evaluation'), and is joined only
+# by the Phase-2 match_evaluation model.
+models:
+  - name: stg_billing__customers
+    description: >
+      Billing customers, 1:1 with c360.bronze_dev.billing_customers.
+      Rename/cast/light-clean only — no joins, no dedup, no business logic.
+    columns:
+      - name: customer_id
+        description: "Billing customer key ('cus_*' format). Grain: one row per customer."
+        data_tests:
+          - unique
+          - not_null
+      - name: email
+        description: "Customer email, lowercased in staging (candidate identity-resolution key)."
+        data_tests:
+          - not_null
+      - name: created_at
+        description: "Account creation timestamp, cast from epoch-seconds string."
+        data_tests:
+          - not_null
+      - name: currency
+        description: "Billing currency, uppercased in staging (USD in all current data)."
+
+  - name: stg_billing__invoices
+    description: >
+      Billing invoices, 1:1 with c360.bronze_dev.billing_invoices.
+      Rename/cast/light-clean only. One row per invoice.
+    columns:
+      - name: invoice_id
+        description: "Invoice key ('in_*' format). Grain: one row per invoice."
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Owning billing customer. FK → stg_billing__customers.customer_id (no orphans as of 2026-11-18)."
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_billing__customers')
+              field: customer_id
+      - name: invoice_date
+        description: "Invoice date, cast from ISO 'YYYY-MM-DD' string."
+        data_tests:
+          - not_null
+      - name: amount_due
+        description: "Invoice amount, cast from numeric string to decimal(12,2)."
+        data_tests:
+          - not_null
+      - name: currency
+        description: "Billing currency, uppercased in staging (USD in all current data)."
+      - name: status
+        description: "Invoice status: open | void | paid | uncollectible (raw lowercase casing)."
+
+  - name: stg_crm__contacts
+    description: >
+      CRM contacts, 1:1 with c360.bronze_dev.crm_contacts.
+      Rename/cast/light-clean only. One row per contact.
+    columns:
+      - name: contact_id
+        description: "CRM contact key. Grain: one row per contact."
+        data_tests:
+          - unique
+          - not_null
+      - name: account_id
+        description: "CRM account key (always present in current data)."
+        data_tests:
+          - not_null
+      - name: email
+        description: "Contact email, lowercased in staging (candidate identity-resolution key). NULL on 161 rows — not not_null-testable."
+      - name: mailing_state
+        description: "Mailing state, 2-letter USPS code, uppercased in staging."
+      - name: created_at
+        description: "Contact creation timestamp, cast from ISO string with '+0000' offset."
+        data_tests:
+          - not_null
+      - name: last_modified_at
+        description: "Contact last-modified timestamp, cast from ISO string."
+
+  - name: stg_marketing__leads
+    description: >
+      Marketing leads, 1:1 with c360.bronze_dev.marketing_leads.
+      Rename/cast/light-clean only; HubSpot-style raw names (firstname,
+      createdate, lifecyclestage) renamed to project snake_case conventions.
+    columns:
+      - name: lead_id
+        description: "Marketing lead key. Grain: one row per lead."
+        data_tests:
+          - unique
+          - not_null
+      - name: email
+        description: "Lead email, lowercased in staging (candidate identity-resolution key)."
+        data_tests:
+          - not_null
+      - name: lifecycle_stage
+        description: "Funnel stage: lead | customer | marketingqualifiedlead | opportunity | subscriber (raw lowercase casing)."
+      - name: lead_source
+        description: "Acquisition channel (title-cased, kept as-is)."
+      - name: created_at
+        description: "Lead creation timestamp, cast from ISO 'Z' string (raw column 'createdate')."
+        data_tests:
+          - not_null
+      - name: last_modified_at
+        description: "Lead last-modified timestamp, cast from ISO 'Z' string (raw column 'lastmodifieddate')."
+
+  - name: stg_marketing__touches
+    description: >
+      Marketing touches (lead engagement events), 1:1 with
+      c360.bronze_dev.marketing_touches. Rename/cast/light-clean only.
+    columns:
+      - name: touch_id
+        description: "Touch event key. Grain: one row per touch."
+        data_tests:
+          - unique
+          - not_null
+      - name: lead_id
+        description: "Touched lead. FK → stg_marketing__leads.lead_id (no orphans as of 2026-11-18)."
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_marketing__leads')
+              field: lead_id
+      - name: touch_type
+        description: "Engagement type: email_open | webinar | demo_request | email_click | form_fill (raw lowercase casing)."
+      - name: touched_at
+        description: "Touch timestamp, cast from ISO 'Z' string (raw column 'touch_ts')."
+        data_tests:
+          - not_null
+
+  - name: stg_support__requesters
+    description: >
+      Support requesters, 1:1 with c360.bronze_dev.support_requesters.
+      Rename/cast/light-clean only. One row per requester.
+    columns:
+      - name: requester_id
+        description: "Support requester key. Grain: one row per requester."
+        data_tests:
+          - unique
+          - not_null
+      - name: email
+        description: "Requester email, lowercased in staging (candidate identity-resolution key)."
+        data_tests:
+          - not_null
+      - name: created_at
+        description: "Requester creation timestamp, cast from ISO 'Z' string."
+        data_tests:
+          - not_null
+
+  - name: stg_support__tickets
+    description: >
+      Support tickets, 1:1 with c360.bronze_dev.support_tickets.
+      Rename/cast/light-clean only. One row per ticket.
+    columns:
+      - name: ticket_id
+        description: "Ticket key. Grain: one row per ticket."
+        data_tests:
+          - unique
+          - not_null
+      - name: requester_id
+        description: "Requesting user. FK → stg_support__requesters.requester_id (no orphans as of 2026-11-18)."
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_support__requesters')
+              field: requester_id
+      - name: priority
+        description: "Ticket priority: normal | high | low | urgent (raw lowercase casing)."
+      - name: channel
+        description: "Intake channel: chat | email | phone | web (raw lowercase casing)."
+      - name: status
+        description: "Ticket status: solved | pending | open | new (raw lowercase casing)."
+      - name: created_at
+        description: "Ticket creation timestamp, cast from ISO 'Z' string."
+        data_tests:
+          - not_null
+      - name: solved_at
+        description: "Ticket resolution timestamp; NULL on unsolved tickets (15 as of 2026-11-18) — intentionally not not_null-tested."

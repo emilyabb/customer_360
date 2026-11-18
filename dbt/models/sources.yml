@@ -1,0 +1,33 @@
+version: 2
+
+# Note: dbt-databricks maps database: c360 to the UC catalog. schema is the second-level namespace (bronze_dev).
+sources:
+  - name: bronze
+    database: c360 # The Unity catalog
+    schema: bronze_dev # For now, keep _dev underscore
+    # Freshness: all 7 bronze tables carry _loaded_at from the Auto Loader loader.
+    # dbt >= 1.10 requires these under config:
+    config:
+      loaded_at_field: _loaded_at
+      freshness:
+        warn_after: {count: 5, period: day}
+        error_after: {count: 14, period: day}
+    tables:
+      - name: billing_customers
+      - name: billing_invoices
+      - name: crm_contacts
+      - name: marketing_leads
+      - name: marketing_touches
+      - name: support_requesters
+      - name: support_tickets
+
+  # Identity-resolution ground truth (source record → true_customer_id), deliberately
+  # kept OUT of bronze per PROJECT_PLAN.md Phase 1 ("keep the true_customer_id
+  # answer key out of bronze"): it is scoring data, not modeling data — no
+  # staging model reads it. Only the Phase-2 match_evaluation model joins it.
+  # No freshness config: it is not pipeline data.
+  - name: evaluation
+    database: c360
+    schema: evaluation_dev
+    tables:
+      - name: answer_key

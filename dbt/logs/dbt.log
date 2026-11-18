@@ -1,0 +1,404 @@
+[0m21:21:14.220183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff425afb2090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4258225010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4259122570>]}
+
+
+============================== 21:21:14.224203 | c9997eea-ddb4-4c3b-a1ae-896c463cbad9 ==============================
+[0m21:21:14.224203 [info ] [MainThread]: Running with dbt=1.12.6
+[0m21:21:14.225555 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'use_experimental_parser': 'False', 'profiles_dir': '.', 'maximum_seed_size_mib': '1', 'hints_enabled': 'True', 'empty': 'None', 'fail_fast': 'False', 'invocation_command': 'dbt parse', 'debug': 'False', 'version_check': 'True', 'write_json': 'True', 'use_colors': 'True', 'static_parser': 'True', 'log_format': 'default', 'no_print': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'warn_error': 'None', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/Workspace/Repos/dev/customer_360/dbt/logs', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'printer_width': '80'}
+[0m21:21:15.206345 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m21:21:15.207637 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m21:21:15.208375 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m21:21:16.102023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c9997eea-ddb4-4c3b-a1ae-896c463cbad9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4259464b00>]}
+[0m21:21:16.170988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c9997eea-ddb4-4c3b-a1ae-896c463cbad9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4241d51610>]}
+[0m21:21:16.172566 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m21:21:16.297953 [debug] [MainThread]: checksum: c216fdc79c610d8aebe23ce06faaf8e566254f8b73491b95b86e16dcbb227ced, vars: {}, profile: customer_360_dbt, target: dev, version: 1.12.6
+[0m21:21:16.299671 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:21:16.300432 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c9997eea-ddb4-4c3b-a1ae-896c463cbad9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4241c35e20>]}
+[0m21:21:20.982862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c9997eea-ddb4-4c3b-a1ae-896c463cbad9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4241708ef0>]}
+[0m21:21:20.988358 [info ] [MainThread]: Performance info: /Workspace/Repos/dev/customer_360/dbt/target/perf_info.json
+[0m21:21:21.117135 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/Repos/dev/customer_360/dbt/target/manifest.json
+[0m21:21:21.125040 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/Repos/dev/customer_360/dbt/target/semantic_manifest.json
+[0m21:21:21.144181 [debug] [MainThread]: Wrote artifact OsiDocument to /Workspace/Repos/dev/customer_360/dbt/target/osi_document.json
+[0m21:21:21.149748 [debug] [MainThread]: Resource report: {"command_name": "parse", "command_success": true, "command_wall_clock_time": 7.102504, "process_in_blocks": "3408", "process_kernel_time": 0.307926, "process_mem_max_rss": "267884", "process_out_blocks": "0", "process_user_time": 6.163829}
+[0m21:21:21.151540 [debug] [MainThread]: Command `dbt parse` succeeded at 21:21:21.151256 after 7.10 seconds
+[0m21:21:21.152820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff42587639b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff425918cbc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff425d8d64b0>]}
+[0m21:21:21.153788 [debug] [MainThread]: Flushing usage events
+[0m21:21:21.250039 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:27:01.062194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff689a9c1a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff68b53af60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff68a316420>]}
+
+
+============================== 21:27:01.065823 | 215a89fe-d842-4927-b5f2-a42ebd0cbffe ==============================
+[0m21:27:01.065823 [info ] [MainThread]: Running with dbt=1.12.6
+[0m21:27:01.066827 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'maximum_seed_size_mib': '1', 'log_cache_events': 'False', 'no_print': 'None', 'empty': 'None', 'invocation_command': 'dbt debug', 'debug': 'False', 'profiles_dir': '.', 'log_path': '/Workspace/Repos/dev/customer_360/dbt/logs', 'log_format': 'default', 'warn_error': 'None', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'version_check': 'True', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'partial_parse': 'True', 'printer_width': '80', 'hints_enabled': 'True', 'quiet': 'False', 'fail_fast': 'False', 'write_json': 'True', 'indirect_selection': 'eager'}
+[0m21:27:01.077694 [info ] [MainThread]: dbt version: 1.12.6
+[0m21:27:01.078583 [info ] [MainThread]: python version: 3.12.3
+[0m21:27:01.079349 [info ] [MainThread]: python path: /local_disk0/.ephemeral_nfs/envs/pythonEnv-672be185-47d4-4e02-a1b1-85117d471802/bin/python
+[0m21:27:01.080068 [info ] [MainThread]: os info: Linux-6.1.190-237.431.amzn2023.aarch64-aarch64-with-glibc2.39
+[0m21:27:01.984965 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m21:27:01.986336 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m21:27:01.987142 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m21:27:02.636623 [info ] [MainThread]: Using profiles dir at .
+[0m21:27:02.641768 [info ] [MainThread]: Using profiles.yml file at ./profiles.yml
+[0m21:27:02.645800 [info ] [MainThread]: Using dbt_project.yml file at /Workspace/Repos/dev/customer_360/dbt/dbt_project.yml
+[0m21:27:02.648436 [info ] [MainThread]: adapter type: databricks
+[0m21:27:02.649766 [info ] [MainThread]: adapter version: 1.13.0
+[0m21:27:02.758996 [info ] [MainThread]: Configuration:
+[0m21:27:02.760011 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:27:02.760764 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:27:02.761537 [info ] [MainThread]: Required dependencies:
+[0m21:27:02.762394 [debug] [MainThread]: Executing "git --help"
+[0m21:27:02.790714 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:27:02.792065 [debug] [MainThread]: STDERR: "b''"
+[0m21:27:02.793028 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:27:02.793854 [info ] [MainThread]: Connection:
+[0m21:27:02.794664 [info ] [MainThread]:   host: dbc-61c13420-8917.cloud.databricks.com
+[0m21:27:02.795420 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/0008013c8b90dc49
+[0m21:27:02.796390 [info ] [MainThread]:   catalog: hive_metastore
+[0m21:27:02.797175 [info ] [MainThread]:   schema: silver_dev
+[0m21:27:02.798052 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m21:27:02.908528 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m21:27:02.909467 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m21:27:02.968375 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type='workspace'): no
+[0m21:27:02.969473 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m21:27:02.970183 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.4.0 (supported)
+[0m21:27:02.971102 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m21:27:02.972481 [debug] [MainThread]: Using databricks connection "debug"
+[0m21:27:02.973126 [debug] [MainThread]: On debug: select 1 as id
+[0m21:27:02.973773 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:27:03.379752 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1e13b-4cbc-1f8f-95d9-73a357ef7239) - Created
+[0m21:27:07.758109 [debug] [MainThread]: SQL status: OK in 4.780 seconds
+[0m21:27:07.759995 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f1e13b-4cbc-1f8f-95d9-73a357ef7239, command-id=01f1e13b-4cdb-1b81-bd0f-076e3024342b) - Closing
+[0m21:27:07.842910 [debug] [MainThread]: On debug: Close
+[0m21:27:07.843907 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1e13b-4cbc-1f8f-95d9-73a357ef7239) - Closing
+[0m21:27:07.904738 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:27:07.905831 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:27:07.907242 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 6.984623, "process_in_blocks": "6336", "process_kernel_time": 0.200501, "process_mem_max_rss": "264480", "process_out_blocks": "0", "process_user_time": 4.501268}
+[0m21:27:07.910240 [debug] [MainThread]: Command `dbt debug` succeeded at 21:27:07.910104 after 6.99 seconds
+[0m21:27:07.911183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff6891bf380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff686d97890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff6740e94f0>]}
+[0m21:27:07.912039 [debug] [MainThread]: Flushing usage events
+[0m21:27:07.996945 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:08:29.186038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff19364cb620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff19362feab0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff19364cb650>]}
+
+
+============================== 22:08:29.192621 | a63845c9-a9db-4809-9d56-d3948d8faccf ==============================
+[0m22:08:29.192621 [info ] [MainThread]: Running with dbt=1.12.6
+[0m22:08:29.193915 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'static_parser': 'True', 'printer_width': '80', 'fail_fast': 'False', 'log_format': 'default', 'cache_selected_only': 'False', 'quiet': 'False', 'no_print': 'None', 'debug': 'False', 'empty': 'None', 'partial_parse': 'True', 'profiles_dir': '.', 'hints_enabled': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'log_cache_events': 'False', 'invocation_command': 'dbt parse', 'maximum_seed_size_mib': '1', 'warn_error': 'None', 'introspect': 'True', 'log_path': '/Workspace/Repos/dev/customer_360/dbt/logs', 'use_experimental_parser': 'False', 'write_json': 'True'}
+[0m22:08:30.460688 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m22:08:30.462148 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m22:08:30.463068 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m22:08:31.543877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a63845c9-a9db-4809-9d56-d3948d8faccf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff1936cc9400>]}
+[0m22:08:31.631260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a63845c9-a9db-4809-9d56-d3948d8faccf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff19226f2ff0>]}
+[0m22:08:31.634734 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m22:08:31.801951 [debug] [MainThread]: checksum: c216fdc79c610d8aebe23ce06faaf8e566254f8b73491b95b86e16dcbb227ced, vars: {}, profile: customer_360_dbt, target: dev, version: 1.12.6
+[0m22:08:32.132834 [warn ] [MainThread]: [[33mWARNING[0m][PropertyMovedToConfigDeprecation]: Deprecated functionality
+Found `freshness` as a top-level property of `sources[0]` in file
+`models/sources.yml`. The `freshness` top-level property should be moved into
+the `config` of `sources[0]`.
+[0m22:08:32.139175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a63845c9-a9db-4809-9d56-d3948d8faccf', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff191f083ce0>]}
+[0m22:08:32.160132 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:08:32.161384 [debug] [MainThread]: Partial parsing: updated file: customer_360_dbt://models/sources.yml
+[0m22:08:32.498898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a63845c9-a9db-4809-9d56-d3948d8faccf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff191f2f2b70>]}
+[0m22:08:32.537396 [info ] [MainThread]: Performance info: /Workspace/Repos/dev/customer_360/dbt/target/perf_info.json
+[0m22:08:32.682762 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/Repos/dev/customer_360/dbt/target/manifest.json
+[0m22:08:32.714068 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/Repos/dev/customer_360/dbt/target/semantic_manifest.json
+[0m22:08:32.781029 [debug] [MainThread]: Wrote artifact OsiDocument to /Workspace/Repos/dev/customer_360/dbt/target/osi_document.json
+[0m22:08:32.782136 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- PropertyMovedToConfigDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m22:08:32.783679 [debug] [MainThread]: Resource report: {"command_name": "parse", "command_success": true, "command_wall_clock_time": 6.38521, "process_in_blocks": "37712", "process_kernel_time": 0.368875, "process_mem_max_rss": "272812", "process_out_blocks": "0", "process_user_time": 5.06686}
+[0m22:08:32.784810 [debug] [MainThread]: Command `dbt parse` succeeded at 22:08:32.784668 after 6.39 seconds
+[0m22:08:32.785705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff19362fec30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff193625a1e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff191f205ac0>]}
+[0m22:08:32.786541 [debug] [MainThread]: Flushing usage events
+[0m22:08:32.869393 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:08:56.124115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4c7257b020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4c7260fbc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4c7311de80>]}
+
+
+============================== 22:08:56.128933 | 9b01f469-6a87-41ef-b634-71af0d6b78ac ==============================
+[0m22:08:56.128933 [info ] [MainThread]: Running with dbt=1.12.6
+[0m22:08:56.130060 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'quiet': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'log_format': 'default', 'printer_width': '80', 'use_experimental_parser': 'False', 'introspect': 'True', 'no_print': 'None', 'empty': 'None', 'invocation_command': 'dbt parse --no-partial-parse', 'log_path': '/Workspace/Repos/dev/customer_360/dbt/logs', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'use_colors': 'True', 'write_json': 'True', 'warn_error': 'None', 'target_path': 'None', 'profiles_dir': '.', 'hints_enabled': 'True', 'maximum_seed_size_mib': '1', 'version_check': 'True', 'indirect_selection': 'eager', 'partial_parse': 'False'}
+[0m22:08:57.094647 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m22:08:57.096798 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m22:08:57.098231 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m22:08:57.882170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9b01f469-6a87-41ef-b634-71af0d6b78ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4c5b524170>]}
+[0m22:08:57.950410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9b01f469-6a87-41ef-b634-71af0d6b78ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4c7193f3e0>]}
+[0m22:08:57.953108 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m22:08:58.093187 [debug] [MainThread]: checksum: c216fdc79c610d8aebe23ce06faaf8e566254f8b73491b95b86e16dcbb227ced, vars: {}, profile: customer_360_dbt, target: dev, version: 1.12.6
+[0m22:08:58.096056 [debug] [MainThread]: Partial parsing not enabled
+[0m22:08:59.758941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9b01f469-6a87-41ef-b634-71af0d6b78ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4c71843650>]}
+[0m22:08:59.784921 [info ] [MainThread]: Performance info: /Workspace/Repos/dev/customer_360/dbt/target/perf_info.json
+[0m22:08:59.924822 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/Repos/dev/customer_360/dbt/target/manifest.json
+[0m22:08:59.930433 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/Repos/dev/customer_360/dbt/target/semantic_manifest.json
+[0m22:08:59.946440 [debug] [MainThread]: Wrote artifact OsiDocument to /Workspace/Repos/dev/customer_360/dbt/target/osi_document.json
+[0m22:08:59.947910 [debug] [MainThread]: Resource report: {"command_name": "parse", "command_success": true, "command_wall_clock_time": 3.9598694, "process_in_blocks": "312", "process_kernel_time": 0.328922, "process_mem_max_rss": "272268", "process_out_blocks": "0", "process_user_time": 6.045373}
+[0m22:08:59.948936 [debug] [MainThread]: Command `dbt parse` succeeded at 22:08:59.948818 after 3.96 seconds
+[0m22:08:59.949781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4c7257b020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4c5ae70ef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff4c5b0538c0>]}
+[0m22:08:59.950560 [debug] [MainThread]: Flushing usage events
+[0m22:09:00.029053 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:27:53.271808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff2a5ec7bc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff2a7d0d7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff2a5f923c0>]}
+
+
+============================== 22:27:53.281323 | d5af05ce-a258-4e3e-8b76-8e18edde4e14 ==============================
+[0m22:27:53.281323 [info ] [MainThread]: Running with dbt=1.12.6
+[0m22:27:53.293434 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'quiet': 'False', 'warn_error': 'None', 'introspect': 'True', 'hints_enabled': 'True', 'printer_width': '80', 'use_colors': 'True', 'write_json': 'True', 'partial_parse': 'True', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'fail_fast': 'False', 'invocation_command': 'dbt source freshness --output json', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/Workspace/Repos/dev/customer_360/dbt/logs', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'static_parser': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'debug': 'False', 'target_path': 'None', 'version_check': 'True', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False'}
+[0m22:27:54.717412 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m22:27:54.720841 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m22:27:54.721916 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m22:27:55.614159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd5af05ce-a258-4e3e-8b76-8e18edde4e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff2a28f0c80>]}
+[0m22:27:55.698159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd5af05ce-a258-4e3e-8b76-8e18edde4e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff28ebbbe00>]}
+[0m22:27:55.700186 [info ] [MainThread]: Registered adapter: databricks=1.13.0
+[0m22:27:55.833997 [debug] [MainThread]: checksum: c216fdc79c610d8aebe23ce06faaf8e566254f8b73491b95b86e16dcbb227ced, vars: {}, profile: customer_360_dbt, target: dev, version: 1.12.6
+[0m22:27:56.087768 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:27:56.088728 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:27:56.089513 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:27:56.094404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd5af05ce-a258-4e3e-8b76-8e18edde4e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff28f043560>]}
+[0m22:27:56.244691 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/Repos/dev/customer_360/dbt/target/manifest.json
+[0m22:27:56.277936 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/Repos/dev/customer_360/dbt/target/semantic_manifest.json
+[0m22:27:56.315159 [debug] [MainThread]: Wrote artifact OsiDocument to /Workspace/Repos/dev/customer_360/dbt/target/osi_document.json
+[0m22:27:56.328072 [warn ] [MainThread]: [[33mWARNING[0m][CustomOutputPathInSourceFreshnessDeprecation]: Deprecated
+functionality
+Custom output path usage `--output json` usage detected in `dbt source
+freshness` command.
+[0m22:27:56.338442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd5af05ce-a258-4e3e-8b76-8e18edde4e14', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff28eacfa70>]}
+[0m22:27:56.353511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd5af05ce-a258-4e3e-8b76-8e18edde4e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff28e879d90>]}
+[0m22:27:56.355175 [info ] [MainThread]: Found 8 sources, 782 macros
+[0m22:27:56.356111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5af05ce-a258-4e3e-8b76-8e18edde4e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff28e806d20>]}
+[0m22:27:56.358715 [info ] [MainThread]: 
+[0m22:27:56.360323 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:27:56.361552 [info ] [MainThread]: 
+[0m22:27:56.362703 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m22:27:56.363427 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m22:27:56.364275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5af05ce-a258-4e3e-8b76-8e18edde4e14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff28ebbbda0>]}
+[0m22:27:56.367799 [debug] [Thread-1 (]: Began running node source.customer_360_dbt.bronze.answer_key
+[0m22:27:56.368409 [debug] [Thread-2 (]: Began running node source.customer_360_dbt.bronze.billing_customers
+[0m22:27:56.369052 [debug] [Thread-3 (]: Began running node source.customer_360_dbt.bronze.billing_invoices
+[0m22:27:56.369729 [debug] [Thread-4 (]: Began running node source.customer_360_dbt.bronze.crm_contacts
+[0m22:27:56.375880 [info ] [Thread-4 (]: 4 of 8 START freshness of bronze.crm_contacts .................................. [RUN]
+[0m22:27:56.377130 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=source.customer_360_dbt.bronze.crm_contacts) - Creating connection
+[0m22:27:56.374071 [info ] [Thread-3 (]: 3 of 8 START freshness of bronze.billing_invoices .............................. [RUN]
+[0m22:27:56.370418 [info ] [Thread-1 (]: 1 of 8 START freshness of bronze.answer_key .................................... [RUN]
+[0m22:27:56.372126 [info ] [Thread-2 (]: 2 of 8 START freshness of bronze.billing_customers ............................. [RUN]
+[0m22:27:56.378239 [debug] [Thread-4 (]: Acquiring new databricks connection 'source.customer_360_dbt.bronze.crm_contacts'
+[0m22:27:56.379828 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=source.customer_360_dbt.bronze.billing_invoices) - Creating connection
+[0m22:27:56.380934 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=source.customer_360_dbt.bronze.answer_key) - Creating connection
+[0m22:27:56.385276 [debug] [Thread-1 (]: Acquiring new databricks connection 'source.customer_360_dbt.bronze.answer_key'
+[0m22:27:56.383593 [debug] [Thread-4 (]: Began compiling node source.customer_360_dbt.bronze.crm_contacts
+[0m22:27:56.384394 [debug] [Thread-3 (]: Acquiring new databricks connection 'source.customer_360_dbt.bronze.billing_invoices'
+[0m22:27:56.382722 [debug] [Thread-2 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=source.customer_360_dbt.bronze.billing_customers) - Creating connection
+[0m22:27:56.386667 [debug] [Thread-1 (]: Began compiling node source.customer_360_dbt.bronze.answer_key
+[0m22:27:56.387549 [debug] [Thread-4 (]: Began executing node source.customer_360_dbt.bronze.crm_contacts
+[0m22:27:56.388522 [debug] [Thread-3 (]: Began compiling node source.customer_360_dbt.bronze.billing_invoices
+[0m22:27:56.389382 [debug] [Thread-2 (]: Acquiring new databricks connection 'source.customer_360_dbt.bronze.billing_customers'
+[0m22:27:56.390238 [debug] [Thread-1 (]: Began executing node source.customer_360_dbt.bronze.answer_key
+[0m22:27:56.406823 [debug] [Thread-3 (]: Began executing node source.customer_360_dbt.bronze.billing_invoices
+[0m22:27:56.414252 [debug] [Thread-4 (]: Using databricks connection "source.customer_360_dbt.bronze.crm_contacts"
+[0m22:27:56.415344 [debug] [Thread-2 (]: Began compiling node source.customer_360_dbt.bronze.billing_customers
+[0m22:27:56.423248 [debug] [Thread-2 (]: Began executing node source.customer_360_dbt.bronze.billing_customers
+[0m22:27:56.421334 [debug] [Thread-3 (]: Using databricks connection "source.customer_360_dbt.bronze.billing_invoices"
+[0m22:27:56.422278 [debug] [Thread-4 (]: On source.customer_360_dbt.bronze.crm_contacts: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "customer_360_dbt", "target_name": "dev", "invocation_id": "d5af05ce-a258-4e3e-8b76-8e18edde4e14", "node_id": "source.customer_360_dbt.bronze.crm_contacts"} */
+select
+      max(_loaded_at) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `c360`.`bronze_dev`.`crm_contacts`
+    
+  
+[0m22:27:56.418613 [debug] [Thread-1 (]: Using databricks connection "source.customer_360_dbt.bronze.answer_key"
+[0m22:27:56.425948 [debug] [Thread-2 (]: Using databricks connection "source.customer_360_dbt.bronze.billing_customers"
+[0m22:27:56.426875 [debug] [Thread-3 (]: On source.customer_360_dbt.bronze.billing_invoices: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "customer_360_dbt", "target_name": "dev", "invocation_id": "d5af05ce-a258-4e3e-8b76-8e18edde4e14", "node_id": "source.customer_360_dbt.bronze.billing_invoices"} */
+select
+      max(_loaded_at) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `c360`.`bronze_dev`.`billing_invoices`
+    
+  
+[0m22:27:56.427653 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:27:56.428428 [debug] [Thread-1 (]: On source.customer_360_dbt.bronze.answer_key: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "customer_360_dbt", "target_name": "dev", "invocation_id": "d5af05ce-a258-4e3e-8b76-8e18edde4e14", "node_id": "source.customer_360_dbt.bronze.answer_key"} */
+select
+      max(_loaded_at) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `c360`.`bronze_dev`.`answer_key`
+    
+  
+[0m22:27:56.429302 [debug] [Thread-2 (]: On source.customer_360_dbt.bronze.billing_customers: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "customer_360_dbt", "target_name": "dev", "invocation_id": "d5af05ce-a258-4e3e-8b76-8e18edde4e14", "node_id": "source.customer_360_dbt.bronze.billing_customers"} */
+select
+      max(_loaded_at) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `c360`.`bronze_dev`.`billing_customers`
+    
+  
+[0m22:27:56.430126 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:27:56.431490 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:27:56.433858 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:27:57.159810 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f1e143-ce91-1315-af72-fa3f56e76ec5) - Created
+[0m22:27:57.160585 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f1e143-ce91-1500-b6a9-551a48580479) - Created
+[0m22:27:57.161273 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1e143-ce91-1149-85c1-f014413840c4) - Created
+[0m22:27:57.161848 [debug] [Thread-2 (]: Databricks adapter: Connection(session-id=01f1e143-ce91-1a81-9d25-dee99401754e) - Created
+[0m22:28:06.685972 [debug] [Thread-1 (]: SQL status: OK in 10.250 seconds
+[0m22:28:06.687528 [debug] [Thread-2 (]: SQL status: OK in 10.250 seconds
+[0m22:28:06.686777 [debug] [Thread-4 (]: SQL status: OK in 10.260 seconds
+[0m22:28:06.688471 [debug] [Thread-3 (]: SQL status: OK in 10.260 seconds
+[0m22:28:06.699543 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f1e143-ce91-1149-85c1-f014413840c4, command-id=01f1e143-ceaf-1d97-9c1a-7aadf962a397) - Closing
+[0m22:28:06.701122 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f1e143-ce91-1315-af72-fa3f56e76ec5, command-id=01f1e143-ceae-11da-aab4-49b8135db691) - Closing
+[0m22:28:06.702817 [debug] [Thread-2 (]: Databricks adapter: Cursor(session-id=01f1e143-ce91-1a81-9d25-dee99401754e, command-id=01f1e143-ceaf-14e1-83b9-7731315db035) - Closing
+[0m22:28:06.705786 [debug] [Thread-3 (]: Databricks adapter: Cursor(session-id=01f1e143-ce91-1500-b6a9-551a48580479, command-id=01f1e143-ceae-1873-a6c4-bfcd4b40ea04) - Closing
+[0m22:28:06.781270 [debug] [Thread-1 (]: On source.customer_360_dbt.bronze.answer_key: Close
+[0m22:28:06.782527 [debug] [Thread-4 (]: On source.customer_360_dbt.bronze.crm_contacts: Close
+[0m22:28:06.784493 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1e143-ce91-1149-85c1-f014413840c4) - Closing
+[0m22:28:06.783524 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f1e143-ce91-1315-af72-fa3f56e76ec5) - Closing
+[0m22:28:06.793940 [debug] [Thread-3 (]: On source.customer_360_dbt.bronze.billing_invoices: Close
+[0m22:28:06.798636 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f1e143-ce91-1500-b6a9-551a48580479) - Closing
+[0m22:28:06.804287 [debug] [Thread-2 (]: On source.customer_360_dbt.bronze.billing_customers: Close
+[0m22:28:06.806198 [debug] [Thread-2 (]: Databricks adapter: Connection(session-id=01f1e143-ce91-1a81-9d25-dee99401754e) - Closing
+[0m22:28:06.841581 [error] [Thread-1 (]: 1 of 8 ERROR STALE freshness of bronze.answer_key .............................. [[31mERROR STALE[0m in 10.46s]
+[0m22:28:06.842839 [debug] [Thread-1 (]: Finished running node source.customer_360_dbt.bronze.answer_key
+[0m22:28:06.843625 [debug] [Thread-1 (]: Began running node source.customer_360_dbt.bronze.marketing_leads
+[0m22:28:06.844318 [debug] [Thread-7 (]: Marking all children of 'source.customer_360_dbt.bronze.answer_key' to be skipped because of status 'error'. 
+[0m22:28:06.845210 [info ] [Thread-1 (]: 5 of 8 START freshness of bronze.marketing_leads ............................... [RUN]
+[0m22:28:06.848212 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=source.customer_360_dbt.bronze.marketing_leads) - Creating connection
+[0m22:28:06.849009 [debug] [Thread-1 (]: Acquiring new databricks connection 'source.customer_360_dbt.bronze.marketing_leads'
+[0m22:28:06.849852 [debug] [Thread-1 (]: Began compiling node source.customer_360_dbt.bronze.marketing_leads
+[0m22:28:06.850584 [debug] [Thread-1 (]: Began executing node source.customer_360_dbt.bronze.marketing_leads
+[0m22:28:06.977518 [debug] [Thread-1 (]: Using databricks connection "source.customer_360_dbt.bronze.marketing_leads"
+[0m22:28:06.979743 [error] [Thread-2 (]: 2 of 8 ERROR STALE freshness of bronze.billing_customers ....................... [[31mERROR STALE[0m in 10.60s]
+[0m22:28:06.983952 [debug] [Thread-1 (]: On source.customer_360_dbt.bronze.marketing_leads: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "customer_360_dbt", "target_name": "dev", "invocation_id": "d5af05ce-a258-4e3e-8b76-8e18edde4e14", "node_id": "source.customer_360_dbt.bronze.marketing_leads"} */
+select
+      max(_loaded_at) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `c360`.`bronze_dev`.`marketing_leads`
+    
+  
+[0m22:28:06.981551 [error] [Thread-4 (]: 4 of 8 ERROR STALE freshness of bronze.crm_contacts ............................ [[31mERROR STALE[0m in 10.60s]
+[0m22:28:06.985793 [error] [Thread-3 (]: 3 of 8 ERROR STALE freshness of bronze.billing_invoices ........................ [[31mERROR STALE[0m in 10.61s]
+[0m22:28:06.986838 [debug] [Thread-2 (]: Finished running node source.customer_360_dbt.bronze.billing_customers
+[0m22:28:06.987684 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:28:06.988606 [debug] [Thread-4 (]: Finished running node source.customer_360_dbt.bronze.crm_contacts
+[0m22:28:06.989528 [debug] [Thread-3 (]: Finished running node source.customer_360_dbt.bronze.billing_invoices
+[0m22:28:06.994258 [debug] [Thread-3 (]: Began running node source.customer_360_dbt.bronze.support_tickets
+[0m22:28:06.991145 [debug] [Thread-7 (]: Marking all children of 'source.customer_360_dbt.bronze.billing_customers' to be skipped because of status 'error'. 
+[0m22:28:06.996104 [debug] [Thread-7 (]: Marking all children of 'source.customer_360_dbt.bronze.crm_contacts' to be skipped because of status 'error'. 
+[0m22:28:06.997049 [debug] [Thread-7 (]: Marking all children of 'source.customer_360_dbt.bronze.billing_invoices' to be skipped because of status 'error'. 
+[0m22:28:06.995105 [info ] [Thread-3 (]: 8 of 8 START freshness of bronze.support_tickets ............................... [RUN]
+[0m22:28:06.993360 [debug] [Thread-4 (]: Began running node source.customer_360_dbt.bronze.support_requesters
+[0m22:28:06.990540 [debug] [Thread-2 (]: Began running node source.customer_360_dbt.bronze.marketing_touches
+[0m22:28:06.998407 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=source.customer_360_dbt.bronze.support_tickets) - Creating connection
+[0m22:28:06.999218 [info ] [Thread-4 (]: 7 of 8 START freshness of bronze.support_requesters ............................ [RUN]
+[0m22:28:07.000123 [info ] [Thread-2 (]: 6 of 8 START freshness of bronze.marketing_touches ............................. [RUN]
+[0m22:28:07.000945 [debug] [Thread-3 (]: Acquiring new databricks connection 'source.customer_360_dbt.bronze.support_tickets'
+[0m22:28:07.003792 [debug] [Thread-3 (]: Began compiling node source.customer_360_dbt.bronze.support_tickets
+[0m22:28:07.004585 [debug] [Thread-3 (]: Began executing node source.customer_360_dbt.bronze.support_tickets
+[0m22:28:07.001955 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=source.customer_360_dbt.bronze.support_requesters) - Creating connection
+[0m22:28:07.002963 [debug] [Thread-2 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=source.customer_360_dbt.bronze.marketing_touches) - Creating connection
+[0m22:28:07.007331 [debug] [Thread-3 (]: Using databricks connection "source.customer_360_dbt.bronze.support_tickets"
+[0m22:28:07.008192 [debug] [Thread-4 (]: Acquiring new databricks connection 'source.customer_360_dbt.bronze.support_requesters'
+[0m22:28:07.010882 [debug] [Thread-4 (]: Began compiling node source.customer_360_dbt.bronze.support_requesters
+[0m22:28:07.011661 [debug] [Thread-4 (]: Began executing node source.customer_360_dbt.bronze.support_requesters
+[0m22:28:07.014379 [debug] [Thread-4 (]: Using databricks connection "source.customer_360_dbt.bronze.support_requesters"
+[0m22:28:07.010000 [debug] [Thread-3 (]: On source.customer_360_dbt.bronze.support_tickets: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "customer_360_dbt", "target_name": "dev", "invocation_id": "d5af05ce-a258-4e3e-8b76-8e18edde4e14", "node_id": "source.customer_360_dbt.bronze.support_tickets"} */
+select
+      max(_loaded_at) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `c360`.`bronze_dev`.`support_tickets`
+    
+  
+[0m22:28:07.016176 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:28:07.015229 [debug] [Thread-4 (]: On source.customer_360_dbt.bronze.support_requesters: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "customer_360_dbt", "target_name": "dev", "invocation_id": "d5af05ce-a258-4e3e-8b76-8e18edde4e14", "node_id": "source.customer_360_dbt.bronze.support_requesters"} */
+select
+      max(_loaded_at) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `c360`.`bronze_dev`.`support_requesters`
+    
+  
+[0m22:28:07.009021 [debug] [Thread-2 (]: Acquiring new databricks connection 'source.customer_360_dbt.bronze.marketing_touches'
+[0m22:28:07.030178 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:28:07.031632 [debug] [Thread-2 (]: Began compiling node source.customer_360_dbt.bronze.marketing_touches
+[0m22:28:07.032823 [debug] [Thread-2 (]: Began executing node source.customer_360_dbt.bronze.marketing_touches
+[0m22:28:07.036324 [debug] [Thread-2 (]: Using databricks connection "source.customer_360_dbt.bronze.marketing_touches"
+[0m22:28:07.037119 [debug] [Thread-2 (]: On source.customer_360_dbt.bronze.marketing_touches: /* {"app": "dbt", "dbt_version": "1.12.6", "dbt_databricks_version": "1.13.0", "databricks_sql_connector_version": "4.4.0", "profile_name": "customer_360_dbt", "target_name": "dev", "invocation_id": "d5af05ce-a258-4e3e-8b76-8e18edde4e14", "node_id": "source.customer_360_dbt.bronze.marketing_touches"} */
+select
+      max(_loaded_at) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `c360`.`bronze_dev`.`marketing_touches`
+    
+  
+[0m22:28:07.037837 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:28:07.379575 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f1e143-d4b0-146f-b5db-7d7acf89ac2d) - Created
+[0m22:28:07.380452 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f1e143-d4b3-114d-b3ba-bd6cdb5fbf47) - Created
+[0m22:28:07.427739 [debug] [Thread-2 (]: Databricks adapter: Connection(session-id=01f1e143-d4c5-1f18-ad35-52b1c7316c9c) - Created
+[0m22:28:07.453803 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1e143-d4c6-1877-b6fe-45c47bdc8b1e) - Created
+[0m22:28:08.489559 [debug] [Thread-2 (]: SQL status: OK in 1.450 seconds
+[0m22:28:08.490375 [debug] [Thread-1 (]: SQL status: OK in 1.500 seconds
+[0m22:28:08.493354 [debug] [Thread-2 (]: Databricks adapter: Cursor(session-id=01f1e143-d4c5-1f18-ad35-52b1c7316c9c, command-id=01f1e143-d4cc-1a31-b3ad-bf7f9ae3201e) - Closing
+[0m22:28:08.495319 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f1e143-d4b0-146f-b5db-7d7acf89ac2d, command-id=01f1e143-d4c6-19a5-8282-a2a1d8d4d1cd) - Closing
+[0m22:28:08.496073 [debug] [Thread-2 (]: On source.customer_360_dbt.bronze.marketing_touches: Close
+[0m22:28:08.498146 [debug] [Thread-1 (]: On source.customer_360_dbt.bronze.marketing_leads: Close
+[0m22:28:08.500478 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f1e143-d4b0-146f-b5db-7d7acf89ac2d) - Closing
+[0m22:28:08.499308 [debug] [Thread-2 (]: Databricks adapter: Connection(session-id=01f1e143-d4c5-1f18-ad35-52b1c7316c9c) - Closing
+[0m22:28:08.559646 [error] [Thread-1 (]: 5 of 8 ERROR STALE freshness of bronze.marketing_leads ......................... [[31mERROR STALE[0m in 1.71s]
+[0m22:28:08.560929 [debug] [Thread-1 (]: Finished running node source.customer_360_dbt.bronze.marketing_leads
+[0m22:28:08.561887 [debug] [Thread-7 (]: Marking all children of 'source.customer_360_dbt.bronze.marketing_leads' to be skipped because of status 'error'. 
+[0m22:28:08.564158 [error] [Thread-2 (]: 6 of 8 ERROR STALE freshness of bronze.marketing_touches ....................... [[31mERROR STALE[0m in 1.56s]
+[0m22:28:08.565298 [debug] [Thread-2 (]: Finished running node source.customer_360_dbt.bronze.marketing_touches
+[0m22:28:08.566313 [debug] [Thread-7 (]: Marking all children of 'source.customer_360_dbt.bronze.marketing_touches' to be skipped because of status 'error'. 
+[0m22:28:08.615006 [debug] [Thread-4 (]: SQL status: OK in 1.580 seconds
+[0m22:28:08.619611 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f1e143-d4c6-1877-b6fe-45c47bdc8b1e, command-id=01f1e143-d4d0-1892-a404-e505df53b5ea) - Closing
+[0m22:28:08.620762 [debug] [Thread-4 (]: On source.customer_360_dbt.bronze.support_requesters: Close
+[0m22:28:08.623084 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f1e143-d4c6-1877-b6fe-45c47bdc8b1e) - Closing
+[0m22:28:08.660249 [debug] [Thread-3 (]: SQL status: OK in 1.640 seconds
+[0m22:28:08.662799 [debug] [Thread-3 (]: Databricks adapter: Cursor(session-id=01f1e143-d4b3-114d-b3ba-bd6cdb5fbf47, command-id=01f1e143-d4c7-101f-b210-f194df7fd29a) - Closing
+[0m22:28:08.663913 [debug] [Thread-3 (]: On source.customer_360_dbt.bronze.support_tickets: Close
+[0m22:28:08.664719 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f1e143-d4b3-114d-b3ba-bd6cdb5fbf47) - Closing
+[0m22:28:08.677609 [error] [Thread-4 (]: 7 of 8 ERROR STALE freshness of bronze.support_requesters ...................... [[31mERROR STALE[0m in 1.68s]
+[0m22:28:08.678913 [debug] [Thread-4 (]: Finished running node source.customer_360_dbt.bronze.support_requesters
+[0m22:28:08.679963 [debug] [Thread-7 (]: Marking all children of 'source.customer_360_dbt.bronze.support_requesters' to be skipped because of status 'error'. 
+[0m22:28:08.718526 [error] [Thread-3 (]: 8 of 8 ERROR STALE freshness of bronze.support_tickets ......................... [[31mERROR STALE[0m in 1.72s]
+[0m22:28:08.719999 [debug] [Thread-3 (]: Finished running node source.customer_360_dbt.bronze.support_tickets
+[0m22:28:08.721033 [debug] [Thread-7 (]: Marking all children of 'source.customer_360_dbt.bronze.support_tickets' to be skipped because of status 'error'. 
+[0m22:28:08.723051 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m22:28:08.723803 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m22:28:08.724783 [info ] [MainThread]: 
+[0m22:28:08.725573 [info ] [MainThread]: Finished running 8 sources in 0 hours 0 minutes and 12.36 seconds (12.36s).
+[0m22:28:08.824915 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/Repos/dev/customer_360/dbt/target/manifest.json
+[0m22:28:08.830687 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/Repos/dev/customer_360/dbt/target/semantic_manifest.json
+[0m22:28:08.834963 [debug] [MainThread]: Wrote artifact OsiDocument to /Workspace/Repos/dev/customer_360/dbt/target/osi_document.json
+[0m22:28:08.843339 [debug] [MainThread]: Wrote artifact FreshnessResult to /Workspace/Repos/dev/customer_360/dbt/json
+[0m22:28:08.844251 [info ] [MainThread]: 
+[0m22:28:08.845125 [error] [MainThread]: [[31mERROR[0m]: in source answer_key (models/sources.yml)
+[0m22:28:08.845885 [error] [MainThread]:   Status: error
+[0m22:28:08.846611 [info ] [MainThread]: 
+[0m22:28:08.847358 [error] [MainThread]: [[31mERROR[0m]: in source billing_customers (models/sources.yml)
+[0m22:28:08.848125 [error] [MainThread]:   Status: error
+[0m22:28:08.849557 [info ] [MainThread]: 
+[0m22:28:08.850615 [error] [MainThread]: [[31mERROR[0m]: in source crm_contacts (models/sources.yml)
+[0m22:28:08.851480 [error] [MainThread]:   Status: error
+[0m22:28:08.852684 [info ] [MainThread]: 
+[0m22:28:08.853823 [error] [MainThread]: [[31mERROR[0m]: in source billing_invoices (models/sources.yml)
+[0m22:28:08.855105 [error] [MainThread]:   Status: error
+[0m22:28:08.855936 [info ] [MainThread]: 
+[0m22:28:08.857226 [error] [MainThread]: [[31mERROR[0m]: in source marketing_leads (models/sources.yml)
+[0m22:28:08.858632 [error] [MainThread]:   Status: error
+[0m22:28:08.859810 [info ] [MainThread]: 
+[0m22:28:08.860649 [error] [MainThread]: [[31mERROR[0m]: in source marketing_touches (models/sources.yml)
+[0m22:28:08.861527 [error] [MainThread]:   Status: error
+[0m22:28:08.862277 [info ] [MainThread]: 
+[0m22:28:08.863139 [error] [MainThread]: [[31mERROR[0m]: in source support_requesters (models/sources.yml)
+[0m22:28:08.864042 [error] [MainThread]:   Status: error
+[0m22:28:08.864808 [info ] [MainThread]: 
+[0m22:28:08.865512 [error] [MainThread]: [[31mERROR[0m]: in source support_tickets (models/sources.yml)
+[0m22:28:08.866244 [error] [MainThread]:   Status: error
+[0m22:28:08.866839 [info ] [MainThread]: Done.
+[0m22:28:08.867719 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- CustomOutputPathInSourceFreshnessDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m22:28:08.869723 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_success": false, "command_wall_clock_time": 18.535822, "process_in_blocks": "24768", "process_kernel_time": 0.424976, "process_mem_max_rss": "292464", "process_out_blocks": "0", "process_user_time": 6.557346}
+[0m22:28:08.870971 [debug] [MainThread]: Command `dbt source freshness` failed at 22:28:08.870816 after 18.54 seconds
+[0m22:28:08.871785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff2a5ec7bc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff2aa73e6c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff2a5d34860>]}
+[0m22:28:08.872530 [debug] [MainThread]: Flushing usage events
+[0m22:28:08.958469 [debug] [MainThread]: An error was encountered while trying to flush usage events

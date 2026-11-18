@@ -10,3 +10,6 @@ dependencies = [
 snowflake = [
     "snowflake-connector-python>=3.12",
 ]
+
+[tool.databricks.environment]
+environment_version = '6'

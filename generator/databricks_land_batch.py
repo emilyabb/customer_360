@@ -40,6 +40,11 @@ start_date = date.fromisoformat(dbutils.widgets.get("start_date"))
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC Set up catalog, schema, and volume
+
+# COMMAND ----------
+
 existing = {row[0] for row in spark.sql("SHOW CATALOGS").collect()}
 if catalog not in existing:
     try:
@@ -49,10 +54,15 @@ if catalog not in existing:
             f"Couldn't create catalog `{catalog}`. If your workspace won't let you create catalogs, "
             "set the catalog widget to `workspace` (the Free Edition default) and rerun."
         ) from err
-
+print(f'Creating if not exists: `{catalog}.{schema}` and `{catalog}.{schema}.{volume}')
 spark.sql(f"CREATE SCHEMA IF NOT EXISTS `{catalog}`.`{schema}`")
 spark.sql(f"CREATE VOLUME IF NOT EXISTS `{catalog}`.`{schema}`.`{volume}`")
 landing_root = f"/Volumes/{catalog}/{schema}/{volume}"
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC Generate and write batch using user parameters
 
 # COMMAND ----------
 
@@ -80,7 +90,8 @@ for name, (system, entity, _) in gen.TABLES.items():
     if system.startswith("_"):
         continue
     df = spark.read.option("header", True).csv(f"{landing_root}/{system}/{entity}/")
-    print(f"{name:<20} {df.count():>8,} rows across {df.select('batch_date').distinct().count()} batch(es)")
+    csv = f"{landing_root}/{system}/{entity}/"
+    print(f"{csv:<50} {name:<20} {df.count():>8,} rows across {df.select('batch_date').distinct().count()} batch(es)")
 
 answer_key = spark.read.option("header", True).csv(f"{landing_root}/_answer_key/answer_key/")
 display(answer_key.groupBy("source_system").agg(F.count("*").alias("records"), F.countDistinct("true_customer_id").alias("true_customers")))

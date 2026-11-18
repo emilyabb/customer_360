@@ -3,3 +3,6 @@
 .uv-cache/
 .tmp/
 landing/
+
+# dbt — credentials (never commit)
+dbt/profiles.yml
