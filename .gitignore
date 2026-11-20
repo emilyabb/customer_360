@@ -4,5 +4,11 @@
 .tmp/
 landing/
 
-# dbt — credentials (never commit)
+# dbt local credentials and generated artifacts
 dbt/profiles.yml
+dbt/.user.yml
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+dbt/dbt_internal_packages/
+dbt/json

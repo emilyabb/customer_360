@@ -51,8 +51,9 @@ models:
         data_tests:
           - not_null
           - relationships:
-              to: ref('stg_billing__customers')
-              field: customer_id
+              arguments:
+                to: ref('stg_billing__customers')
+                field: customer_id
       - name: invoice_date
         description: "Invoice date, cast from ISO 'YYYY-MM-DD' string."
         data_tests:
@@ -132,8 +133,9 @@ models:
         data_tests:
           - not_null
           - relationships:
-              to: ref('stg_marketing__leads')
-              field: lead_id
+              arguments:
+                to: ref('stg_marketing__leads')
+                field: lead_id
       - name: touch_type
         description: "Engagement type: email_open | webinar | demo_request | email_click | form_fill (raw lowercase casing)."
       - name: touched_at
@@ -175,8 +177,9 @@ models:
         data_tests:
           - not_null
           - relationships:
-              to: ref('stg_support__requesters')
-              field: requester_id
+              arguments:
+                to: ref('stg_support__requesters')
+                field: requester_id
       - name: priority
         description: "Ticket priority: normal | high | low | urgent (raw lowercase casing)."
       - name: channel
